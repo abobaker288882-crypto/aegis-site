@@ -193,7 +193,11 @@ export default function Home() {
               </dd>
             </dl>
             <ul className="requirements">
-              <li>Works with any agent host that loads skill folders.</li>
+              <li>
+                Works with any agent host that loads skill folders — e.g.
+                <code> ~/.agents/skills/</code>, <code>~/.codex/skills/</code>,
+                or your host&apos;s equivalent.
+              </li>
               <li>
                 Python 3.9+ powers the deterministic helpers — stdlib only, no
                 packages to install.
