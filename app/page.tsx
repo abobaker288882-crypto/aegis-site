@@ -202,7 +202,7 @@ export default function Home() {
                 External model workers are optional and always verified with a
                 real capability probe before they are used or shown active.
               </li>
-              <li>This site is Next.js 16 served from Cloudflare Workers.</li>
+              <li>This site: Next.js 16, statically delivered, zero third-party origins.</li>
             </ul>
           </div>
         </section>
@@ -211,7 +211,7 @@ export default function Home() {
       <footer className="site-footer">
         <div className="container">
           <p>Aegis · skill suite for accountable coding agents</p>
-          <p>Built and locally verified by Ox Alpha · August 2026</p>
+          <p>Built and verified by Ox Alpha · August 2026</p>
         </div>
       </footer>
     </>
