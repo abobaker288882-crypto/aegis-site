@@ -7,14 +7,12 @@ const MANUAL_CMD = 'cp -R aegis-ceo-skills usage-optimizer second-brain-context 
 const VERIFY_CMD = './verify.sh';
 
 const PIPELINE = [
-  'DISCOVER',
-  'UNDERSTAND',
-  'DESIGN',
-  'BUILD',
-  'INTEGRATE',
-  'SECURE',
-  'TEST',
-  'DEPLOY',
+  'MISSION',
+  'STATE',
+  'EXECUTE',
+  'EVIDENCE',
+  'CHECKPOINT',
+  'RESUME',
   'VERIFY',
 ];
 
@@ -38,6 +36,18 @@ const PILLARS = [
 ];
 
 const COMPONENTS = [
+  {
+    tag: 'Core',
+    name: 'aegis-engine',
+    body: 'The mission operating system: versioned state, evidence gates that refuse unevidenced completion, git-aware staleness, checksummed checkpoints, one-command resume, doctor diagnostics. Stdlib-only.',
+    path: 'aegis-engine/ · 24 tests',
+  },
+  {
+    tag: 'Evidence',
+    name: 'benchmarks',
+    body: 'A deterministic broken-project fixture, an objective scorer, and an A/B protocol to measure whether Aegis actually improves agent performance.',
+    path: 'benchmarks/PROTOCOL.md',
+  },
   {
     tag: 'Flagship',
     name: 'aegis-ceo-skills',
@@ -97,7 +107,7 @@ export default function Home() {
       <main>
         <section className="hero">
           <div className="container">
-            <p className="eyebrow">Agent skill suite</p>
+            <p className="eyebrow">Agent mission system</p>
             <h1>
               From brief to <em>shipped.</em>
             </h1>
@@ -119,7 +129,7 @@ export default function Home() {
 
             <div className="pipeline-section">
               <p className="pipeline-label" id="pipeline-label">
-                The delivery loop every mission follows
+                The execution loop every mission follows
               </p>
               <ol className="pipeline" aria-labelledby="pipeline-label">
                 {PIPELINE.map((stage) => (
@@ -151,7 +161,7 @@ export default function Home() {
 
         <section className="section container" id="components">
           <div className="section-head">
-            <h2>Four focused components</h2>
+            <h2>Six focused components</h2>
             <p>
               Each skill owns one job completely. Together they cover the full
               delivery lifecycle; apart, each is useful on its own.
