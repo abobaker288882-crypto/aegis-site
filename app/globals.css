@@ -448,7 +448,7 @@ a {
   background: var(--bg-raised);
 }
 
-@media (min-width: 720px) {
+@media (min-width: 940px) {
   .install-panel {
     grid-template-columns: 1.2fr 1fr;
     align-items: start;
@@ -495,6 +495,16 @@ a {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
+}
+
+@media (max-width: 939px) {
+  .codeblock {
+    padding-right: 1rem;
+  }
+  .codeblock .copy-btn {
+    position: static;
+    margin-top: 0.5rem;
+  }
 }
 
 .requirements {

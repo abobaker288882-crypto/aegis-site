@@ -1,8 +1,9 @@
 import CopyButton from './CopyButton';
 import Link from 'next/link';
 
-const INSTALL_CMD = 'cp -R aegis-ceo-skills usage-optimizer second-brain-context five-year-old ~/.agents/skills/';
-const VERIFY_CMD = 'python3 -m unittest discover usage-optimizer/scripts -p "test_*.py"';
+const INSTALL_CMD = './install.sh';
+const MANUAL_CMD = 'cp -R aegis-ceo-skills usage-optimizer second-brain-context five-year-old ~/.agents/skills/';
+const VERIFY_CMD = './verify.sh';
 
 const PIPELINE = [
   'DISCOVER',
@@ -110,12 +111,12 @@ export default function Home() {
                 Install Aegis
               </a>
               <span className="install-chip">
-                <code>python3 -m unittest discover usage-optimizer/scripts</code>
+                <code>{VERIFY_CMD}</code>
                 <CopyButton text={VERIFY_CMD} />
               </span>
             </div>
 
-            <div className="pipeline-section" aria-hidden="false">
+            <div className="pipeline-section">
               <p className="pipeline-label" id="pipeline-label">
                 The delivery loop every mission follows
               </p>
@@ -177,26 +178,33 @@ export default function Home() {
           </div>
           <div className="install-panel">
             <dl className="step">
-              <dt>1 · Install the skills</dt>
+              <dt>1 · Install (safe &amp; reversible)</dt>
               <dd>
                 <div className="codeblock">
                   <code>{INSTALL_CMD}</code>
                   <CopyButton text={INSTALL_CMD} />
                 </div>
               </dd>
-              <dt>2 · Verify the tooling</dt>
+              <dt>2 · Verify everything</dt>
               <dd>
                 <div className="codeblock">
                   <code>{VERIFY_CMD}</code>
                   <CopyButton text={VERIFY_CMD} />
                 </div>
               </dd>
+              <dt>Manual alternative</dt>
+              <dd>
+                <div className="codeblock">
+                  <code>{MANUAL_CMD}</code>
+                  <CopyButton text={MANUAL_CMD} />
+                </div>
+              </dd>
             </dl>
             <ul className="requirements">
               <li>
-                Works with any agent host that loads skill folders — e.g.
-                <code> ~/.agents/skills/</code>, <code>~/.codex/skills/</code>,
-                or your host&apos;s equivalent.
+                The installer is idempotent, backs up existing copies before
+                upgrading, and ends with a live smoke check — see
+                <code> QUICKSTART.md</code>.
               </li>
               <li>
                 Python 3.9+ powers the deterministic helpers — stdlib only, no
