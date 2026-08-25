@@ -39,8 +39,8 @@ const COMPONENTS = [
   {
     tag: 'Core',
     name: 'aegis-engine',
-    body: 'The mission operating system: versioned state, evidence gates that refuse unevidenced completion, git-aware staleness, checksummed checkpoints, one-command resume, doctor diagnostics. Stdlib-only.',
-    path: 'aegis-engine/ · 24 tests',
+    body: 'The mission operating system: versioned state, evidence gates that refuse unevidenced completion (re-executable evidence), git-aware staleness, checksummed checkpoints, one-command resume, and regression memory that auto-surfaces past failures when you touch related code. Stdlib-only.',
+    path: 'aegis-engine/ · 36 tests',
   },
   {
     tag: 'Evidence',
