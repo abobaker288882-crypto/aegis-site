@@ -1,6 +1,7 @@
 import CopyButton from './CopyButton';
 import Link from 'next/link';
 
+const CLONE_CMD = 'git clone https://github.com/abobaker288882-crypto/aegis.git';
 const INSTALL_CMD = './install.sh';
 const MANUAL_CMD = 'cp -R aegis-ceo-skills usage-optimizer second-brain-context five-year-old ~/.agents/skills/';
 const VERIFY_CMD = './verify.sh';
@@ -178,14 +179,21 @@ export default function Home() {
           </div>
           <div className="install-panel">
             <dl className="step">
-              <dt>1 · Install (safe &amp; reversible)</dt>
+              <dt>1 · Get the code</dt>
+              <dd>
+                <div className="codeblock">
+                  <code>{CLONE_CMD}</code>
+                  <CopyButton text={CLONE_CMD} />
+                </div>
+              </dd>
+              <dt>2 · Install (safe &amp; reversible)</dt>
               <dd>
                 <div className="codeblock">
                   <code>{INSTALL_CMD}</code>
                   <CopyButton text={INSTALL_CMD} />
                 </div>
               </dd>
-              <dt>2 · Verify everything</dt>
+              <dt>3 · Verify everything</dt>
               <dd>
                 <div className="codeblock">
                   <code>{VERIFY_CMD}</code>
