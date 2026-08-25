@@ -211,7 +211,7 @@ export default function Home() {
       <footer className="site-footer">
         <div className="container">
           <p>Aegis · skill suite for accountable coding agents</p>
-          <p>Verified end to end by Ox Alpha · August 2026</p>
+          <p>Built and locally verified by Ox Alpha · August 2026</p>
         </div>
       </footer>
     </>
